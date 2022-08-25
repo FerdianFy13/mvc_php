@@ -5,7 +5,7 @@ class About extends Controller
     public function index($name = 'Laravel', $job = 'framework')
     {
         // echo "hallo, saya adalah $job $name";
-        $data['title'] = 'About Index';
+        $data['title'] = 'About';
         $data['name'] = $name;
         $data['job'] = $job;
 
@@ -17,7 +17,7 @@ class About extends Controller
     public function page()
     {
         // echo 'About/page';
-        $data['title'] = 'About Page';
+        $data['title'] = 'About';
         $this->view('partials/header', $data);
         $this->view('about/page');
         $this->view('partials/footer');
