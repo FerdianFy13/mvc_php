@@ -24,11 +24,17 @@ class Mahasiswa extends Controller
         $this->view('partials/footer');
     }
 
-    public function insert() {
+    public function insert()
+    {
         // var_dump($_POST);
         if ($this->model('Mahasiswa_model')->tambahDataMahasiswa($_POST) > 0) {
+            Flasher::setFlash('success', 'insert data', 'warning');
             header('location: ' . BASEURL . '/mahasiswa');
-            exit;
+            exit();
+        } else {
+            Flasher::setFlash('failed', 'insert data', 'danger');
+            header('location: ' . BASEURL . '/mahasiswa');
+            exit();
         }
     }
 }
