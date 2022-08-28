@@ -1,6 +1,10 @@
 <div class="container mt-5">
     <div class="row">
     <div class="col-6">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info mb-2" data-bs-toggle="modal" data-bs-target="#formModal">
+            Insert Data
+        </button>
         <h3>List Students</h3>
         <ul class="list-group">
         <?php foreach ($data['mahasiswa'] as $mhs): ?>
@@ -15,4 +19,40 @@
         </ul>
     </div>
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="titleModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titleModal">Insert Data Students</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="<?= BASEURL ?>/mahasiswa/insert" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="nim">Nim</label>
+                <input type="number" class="form-control" id="nim" name="nim">
+            </div>
+            <div class="form-group">
+                <label for="major">Major</label>
+                <select class="form-control" id="major" name="major">
+                    <option value="Teknik Informatika">Teknik Informatika</option>
+                    <option value="Teknik Sipil">Teknik Sipil</option>
+                    <option value="Teknik Mesin">Teknik Mesin</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-warning">Insert</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
