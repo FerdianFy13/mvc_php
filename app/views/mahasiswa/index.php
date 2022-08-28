@@ -8,7 +8,7 @@
                 'name'
             ] ?>
                 <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs[
-    'id_mhs'
+    'id'
 ] ?>" class="badge bg-primary text-decoration-none ">Details</a>
             </li>
         <?php endforeach; ?>
