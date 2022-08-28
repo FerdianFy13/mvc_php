@@ -1,0 +1,1 @@
+database wrapper adalah pembungkus dari database yang akan dikelola oleh sebuah class yang dapat mengelola database dimodel manapun
