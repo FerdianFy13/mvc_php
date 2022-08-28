@@ -10,6 +10,9 @@
         <a class="nav-link <?= $data['title'] == 'Home'
             ? 'active'
             : '' ?>" href="<?= BASEURL ?>">Home</a>
+        <a class="nav-link <?= $data['title'] == 'Mahasiswa'
+            ? 'active'
+            : '' ?>" href="<?= BASEURL ?>/mahasiswa">Mahasiswa</a>
         <a class="nav-link <?= $data['title'] == 'About'
             ? 'active'
             : '' ?>" href="<?= BASEURL ?>/about">About</a>
