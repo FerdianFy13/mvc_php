@@ -19,6 +19,9 @@
                 <a href="<?= BASEURL ?>/mahasiswa/delete/<?= $mhs[
     'id'
 ] ?>" class="badge bg-danger float-end ms-1 text-decoration-none" onclick="return confirm('are you sure delete???')">Delete</a>
+                <a href="<?= BASEURL ?>/mahasiswa/update/<?= $mhs[
+    'id'
+] ?>" class="badge bg-success float-end me-1 ms-1 text-decoration-none" data-bs-toggle="modal" data-bs-target="#formModal">Update</a>
                 <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs[
     'id'
 ] ?>" class="badge bg-primary float-end me-1 text-decoration-none">Details</a>
