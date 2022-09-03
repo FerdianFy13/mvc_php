@@ -9,7 +9,7 @@
     <div class="row">
     <div class="col-lg-6">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-info mb-2" data-bs-toggle="modal" data-bs-target="#formModal">
+        <button type="button" class="btn btn-info mb-2 tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
             Insert Data
         </button>
         <h3>List Students</h3>
@@ -21,7 +21,9 @@
 ] ?>" class="badge bg-danger float-end ms-1 text-decoration-none" onclick="return confirm('are you sure delete???')">Delete</a>
                 <a href="<?= BASEURL ?>/mahasiswa/update/<?= $mhs[
     'id'
-] ?>" class="badge bg-success float-end me-1 ms-1 text-decoration-none" data-bs-toggle="modal" data-bs-target="#formModal">Update</a>
+] ?>" class="badge bg-success float-end me-1 ms-1 text-decoration-none tampilModalUbah" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $mhs[
+    'id'
+] ?>">Update</a>
                 <a href="<?= BASEURL ?>/mahasiswa/detail/<?= $mhs[
     'id'
 ] ?>" class="badge bg-primary float-end me-1 text-decoration-none">Details</a>
@@ -37,7 +39,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="titleModal">Insert Data Students</h5>
+        <h5 class="modal-title" id="titleModalLabels">Insert Data Students</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
