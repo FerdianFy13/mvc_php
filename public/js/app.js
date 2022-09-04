@@ -17,11 +17,11 @@ $(function () {
       method: 'post',
       dataType: 'json',
       success: function (data) {
-        $('#name').val(data.name)
-        $('#nim').val(data.nim)
-        $('#major').val(data.major)
-        // $('#jurusan').val(data.jurusan)
-        $('#id').val(data.id)
+        // $('#name').val(data.name)
+        // $('#nim').val(data.nim)
+        // $('#major').val(data.major)
+        // // $('#jurusan').val(data.jurusan)
+        // $('#id').val(data.id)
         console.log(data)
       },
     })
