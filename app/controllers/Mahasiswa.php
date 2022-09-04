@@ -51,5 +51,13 @@ class Mahasiswa extends Controller
             exit();
         }
     }
+
+    public function getubah()
+    {
+        // echo 'done';
+        echo json_encode(
+            $this->model('Mahasiwa_model')->getDetail($_POST['id'])
+        );
+    }
 }
 ?>
