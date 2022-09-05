@@ -43,7 +43,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="<?= BASEURL ?>/mahasiswa/insert" method="post">
+        <form action="<?= BASEURL ?>/mahasiswa/insert" method="POST">
             <input type="hidden" name="id" id="id">
             <div class="form-group">
                 <label for="name">Name</label>

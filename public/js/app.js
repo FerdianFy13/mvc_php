@@ -31,7 +31,7 @@ $(function () {
         $('#nim').val(data.nim)
         $('#major').val(data.major)
         $('#id').val(data.id)
-        // console.log(data)
+        console.log(data)
       },
     })
   })
