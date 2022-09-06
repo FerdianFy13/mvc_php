@@ -73,5 +73,15 @@ class Mahasiswa extends Controller
             exit();
         }
     }
+
+    public function search()
+    {
+        $data['title'] = 'Mahasiswa';
+        $data['mahasiswa'] = $this->model('Mahasiswa_model')->getAll();
+
+        $this->view('partials/header', $data);
+        $this->view('mahasiswa/index', $data);
+        $this->view('partials/footer');
+    }
 }
 ?>

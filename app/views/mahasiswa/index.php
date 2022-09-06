@@ -6,12 +6,29 @@
         </div>
     </div>
 
+    <div class="row mb-3">
+        <div class="col-lg-6">
+            <button type="button" class="btn btn-info mb-2 tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
+                Insert Data
+            </button>
+        </div>
+    </div>
+
+    <!-- searching -->
+    <div class="row mb-3">
+        <div class="col-lg-6">
+            <form action="<?= BASEURL ?>/mahasiswa/search" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search List Data Students..." name="keywoard" id="keywoard" autocomplete="off">
+                    <button class="btn btn-outline-primary" type="submit" id="buttonSearch">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="row">
     <div class="col-lg-6">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-info mb-2 tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
-            Insert Data
-        </button>
         <h3>List Students</h3>
         <ul class="list-group">
         <?php foreach ($data['mahasiswa'] as $mhs): ?>
