@@ -61,6 +61,16 @@ class Mahasiswa_model
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    public function searchAll()
+    {
+        $data = $_POST['keywoard'];
+        $query = 'SELECT * FROM mahasiswa WHERE name LIKE :keywoard';
+        $this->db->query($query);
+        $this->db->bind('keywoard', "%$data%");
+
+        return $this->db->resultSet();
+    }
 }
 
 ?>

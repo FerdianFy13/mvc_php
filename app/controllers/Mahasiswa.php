@@ -77,7 +77,7 @@ class Mahasiswa extends Controller
     public function search()
     {
         $data['title'] = 'Mahasiswa';
-        $data['mahasiswa'] = $this->model('Mahasiswa_model')->getAll();
+        $data['mahasiswa'] = $this->model('Mahasiswa_model')->searchAll();
 
         $this->view('partials/header', $data);
         $this->view('mahasiswa/index', $data);
